@@ -6,8 +6,9 @@ node_modules/
 /.pnp
 .pnp.js
 .yarn/install-state.gz
-BACK/
-BACKUP/
+dist/
+/dist
+dist
 
 # testing
 /coverage
