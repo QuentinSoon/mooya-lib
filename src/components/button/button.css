@@ -1,5 +1,145 @@
-@import '../../app/globals.css';
-
 .button {
-	@apply relative;
+	@apply relative inline-flex items-center justify-center whitespace-nowrap box-border select-none duration-200;
+
+	&.button-loading {
+		& > .button-content {
+			@apply opacity-0;
+		}
+	}
+
+	&.button-fullWidth {
+		@apply w-full;
+	}
+
+	&.button-contentFullWidth {
+		@apply justify-between;
+	}
+
+	.button-lottie {
+		@apply absolute h-full;
+	}
+
+	/**
+	 * Button variant
+	 */
+	&.button-variant-solid {
+		@apply bg-[--btn-solid] text-[--btn-foreground];
+		&:not(:disabled):hover {
+			@apply bg-[--btn-solid-hover];
+		}
+	}
+	&.button-variant-outline {
+		@apply bg-transparent text-[--btn-text] border-2 border-[--btn-border];
+		&:not(:disabled):hover {
+			@apply bg-[--btn-background-hover] border-[--btn-border-hover];
+		}
+	}
+	&.button-variant-ghost {
+		@apply bg-transparent text-[--btn-text] border-2 border-[--btn-border];
+		&:not(:disabled):hover {
+			@apply border-[--btn-border-hover] bg-[--btn-solid-hover] text-[--btn-foreground];
+		}
+	}
+	&.button-variant-light {
+		@apply bg-transparent text-[--btn-text];
+		&:not(:disabled):hover {
+			@apply bg-[--btn-background-hover];
+		}
+	}
+	&.button-variant-flat {
+		@apply bg-[--btn-background-hover] text-[--btn-text];
+		&:not(:disabled):hover {
+			@apply bg-[--btn-background];
+		}
+	}
+	&.button-variant-faded {
+		@apply bg-[--color-basic-100] text-[--btn-text] border-2 border-[--color-basic-200];
+		&:not(:disabled):hover {
+			@apply bg-[--color-basic-50];
+		}
+	}
+
+	/**
+	 * Button size
+	 */
+	&.button-size-sm {
+		@apply px-3 h-8 min-w-16 text-sm font-normal rounded-xl gap-1;
+		svg {
+			@apply h-4 w-4;
+		}
+	}
+	&.button-size-md {
+		@apply px-4 h-10 min-w-20 text-sm font-medium rounded-xl gap-1;
+		svg {
+			@apply h-5 w-5;
+		}
+	}
+	&.button-size-lg {
+		@apply px-6 h-12 min-w-24 text-base font-normal rounded-2xl gap-1;
+		svg {
+			@apply h-6 w-6;
+		}
+	}
+
+	/**
+	 * Button rounded
+	 */
+	&.button-rounded-none {
+		@apply rounded-none;
+	}
+	&.button-rounded-sm {
+		@apply rounded-lg;
+	}
+	&.button-rounded-md {
+		@apply rounded-xl;
+	}
+	&.button-rounded-lg {
+		@apply rounded-2xl;
+	}
+	&.button-rounded-full {
+		@apply rounded-full;
+	}
+
+	/**
+	 * Button color
+	 */
+	&.button-color-berry {
+		--btn-solid: var(--color-berry-700);
+		--btn-solid-hover: var(--color-berry-800);
+		--btn-border: var(--color-berry-700);
+		--btn-border-hover: var(--color-berry-800);
+		--btn-background: var(--color-berry-200);
+		--btn-background-hover: var(--color-berry-100);
+		--btn-text: var(--color-berry-700);
+		--btn-foreground: var(--color-berry-50);
+	}
+	&.button-color-basic {
+		--btn-solid: var(--color-basic-800);
+		--btn-solid-hover: #000000;
+		--btn-border: var(--color-basic-200);
+		--btn-border-hover: #000000;
+		--btn-background: var(--color-basic-200);
+		--btn-background-hover: var(--color-basic-100);
+		--btn-text: var(--color-basic-800);
+		--btn-foreground: var(--color-berry-50);
+	}
+	&.button-color-paradiso {
+		--btn-solid: var(--color-paradiso-500);
+		--btn-solid-hover: var(--color-paradiso-600);
+		--btn-border: var(--color-paradiso-500);
+		--btn-border-hover: var(--color-paradiso-600);
+		--btn-background: var(--color-paradiso-200);
+		--btn-background-hover: var(--color-paradiso-100);
+		--btn-text: var(--color-paradiso-500);
+		--btn-foreground: var(--color-paradiso-50);
+	}
+	&.button-color-foreground {
+		--btn-solid: var(--color-basic-200);
+		--btn-solid-hover: var(--color-basic-300);
+		--btn-border: var(--color-basic-200);
+		--btn-border-hover: var(--color-basic-300);
+		--btn-background: var(--color-basic-200);
+		--btn-background-hover: var(--color-basic-100);
+		--btn-text: #000000 --btn-foreground: #000000;
+	}
 }

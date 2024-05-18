@@ -1,16 +1,16 @@
 'use client';
 
-import { cn } from '@/utils/cn';
 import Lottie from 'lottie-react';
 import { ButtonHTMLAttributes, PropsWithChildren, forwardRef } from 'react';
-import Spinner from '../../../public/Spinner.json';
-import './button.css';
 import {
 	ButtonColorProps,
 	ButtonRoundedProps,
 	ButtonSizeProps,
 	ButtonVariantProps,
-} from './types';
+} from '.';
+import Spinner from '../../../public/assets/Spinner.json';
+import { cn } from '../../utils/cn';
+import './button.css';
 
 type ButtonProps = PropsWithChildren<{
 	/**
@@ -103,7 +103,7 @@ const Button = forwardRef<HTMLButtonElement, UseButtonProps>(
 				{...otherProps}
 			>
 				{loading && (
-					<Lottie animationData={Spinner} className="absolute h-full" />
+					<Lottie animationData={Spinner} className="button-lottie" />
 				)}
 				{startContent ? startContent : <span></span>}
 				{children && <span className={cn('button-content')}>{children}</span>}

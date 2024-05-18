@@ -1,0 +1,15 @@
+.navbar {
+	@apply relative border-b h-16 w-full;
+
+	.navbar-left {
+		@apply absolute left-16 m-auto h-full w-fit inline-flex items-center;
+	}
+
+	.navbar-center {
+		@apply absolute inset-0 m-auto h-full w-fit inline-flex items-center;
+	}
+
+	.navbar-right {
+		@apply absolute right-16 m-auto h-full w-fit inline-flex items-center;
+	}
+}

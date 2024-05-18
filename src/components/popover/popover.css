@@ -1,0 +1,51 @@
+.popover {
+	@apply relative h-fit w-fit;
+}
+
+.popover-defaultContent {
+	@apply w-56 overflow-hidden bg-white rounded-2xl shadow-lg ring-1 ring-neutral-200 px-4 py-3;
+}
+
+.popover-content {
+	@apply z-50 absolute;
+}
+
+.overlay-center {
+	@apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+.overlay-top {
+	@apply -translate-x-1/2 -translate-y-full -top-4 left-1/2;
+}
+.overlay-right {
+	@apply translate-x-full -translate-y-1/2 -right-4 top-1/2;
+}
+.overlay-left {
+	@apply -translate-x-full -translate-y-1/2 -left-4 top-1/2;
+}
+.overlay-bottom {
+	@apply -translate-x-1/2 translate-y-full -bottom-4 left-1/2;
+}
+.overlay-top-right {
+	@apply -translate-y-full -top-4 right-0;
+}
+.overlay-top-left {
+	@apply -translate-y-full -top-4 left-0;
+}
+.overlay-right-top {
+	@apply translate-x-full -right-4 top-0;
+}
+.overlay-right-bottom {
+	@apply translate-x-full -right-4 bottom-0;
+}
+.overlay-left-top {
+	@apply -translate-x-full -left-4 top-0;
+}
+.overlay-left-bottom {
+	@apply -translate-x-full -left-4 bottom-0;
+}
+.overlay-bottom-right {
+	@apply translate-y-full -bottom-4 right-0;
+}
+.overlay-bottom-left {
+	@apply translate-y-full -bottom-4 left-0;
+}

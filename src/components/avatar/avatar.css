@@ -1,0 +1,55 @@
+.avatar {
+	@apply relative inline-flex items-center justify-center overflow-hidden box-border border-none outline-none subpixel-antialiased bg-[--color-primary];
+}
+.avatar-image {
+	@apply relative object-cover h-full w-full;
+}
+
+/**
+* Avatar size
+*/
+.avatar-size-sm {
+	@apply h-8 w-8 text-xs font-normal;
+}
+.avatar-size-md {
+	@apply h-10 w-10 text-xs font-normal;
+}
+.avatar-size-lg {
+	@apply h-12 w-12 text-sm font-normal;
+}
+
+/**
+* Avatar rounded
+*/
+.avatar-rounded-none {
+	@apply rounded-none;
+}
+.avatar-rounded-sm {
+	@apply rounded-lg;
+}
+.avatar-rounded-md {
+	@apply rounded-xl;
+}
+.avatar-rounded-lg {
+	@apply rounded-2xl;
+}
+.avatar-rounded-full {
+	@apply rounded-full;
+}
+
+/**
+* Avatar color 'basic' | 'berry' | 'paradiso' | 'foreground';
+
+*/
+.avatar-color-basic {
+	--color-primary: var(--color-basic-800);
+}
+.avatar-color-berry {
+	--color-primary: var(--color-berry-700);
+}
+.avatar-color-paradiso {
+	--color-primary: var(--color-paradiso-500);
+}
+.avatar-color-foreground {
+	--color-primary: var(--color-basic-200);
+}

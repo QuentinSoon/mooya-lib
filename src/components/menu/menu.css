@@ -1,0 +1,93 @@
+.menu {
+	@apply flex flex-col gap-0.5;
+
+	& > .menu-separator {
+		@apply w-full h-px m-1 bg-neutral-200;
+	}
+}
+
+.menu-item {
+	@apply flex items-center justify-between w-full hover:bg-[--mn-solid] cursor-pointer box-border duration-150;
+
+	/**
+	 * Menu Item variant
+	 */
+	&.menu-item-variant-solid {
+		@apply text-[var(--color-basic-950)] bg-transparent;
+		&:not(:disabled):hover {
+			@apply bg-[--mn-solid] text-[--mn-foreground];
+		}
+	}
+	&.menu-item-variant-outline {
+		@apply text-[var(--color-basic-950)] bg-transparent outline outline-2 outline-transparent;
+		&:not(:disabled):hover {
+			@apply outline-[--mn-border] text-[--mn-text];
+		}
+	}
+	&.menu-item-variant-light {
+		@apply text-[--mn-text] bg-transparent;
+		&:not(:disabled):hover {
+			@apply bg-[--mn-solid-light];
+		}
+	}
+	&.menu-item-variant-flat {
+		@apply text-[var(--color-basic-950)] bg-transparent;
+		&:not(:disabled):hover {
+			@apply bg-[--mn-solid-flat] text-[--mn-text];
+		}
+	}
+	&.menu-item-variant-faded {
+		@apply text-[--mn-text] bg-transparent outline outline-1 outline-transparent;
+		&:not(:disabled):hover {
+			@apply outline-[var(--color-basic-300)] bg-[var(--color-basic-100)];
+		}
+	}
+
+	/**
+	 * Menu Item size
+	 */
+	&.menu-item-size-sm {
+		@apply px-2 py-1.5 text-sm font-normal rounded-lg;
+	}
+	&.menu-item-size-md {
+		@apply px-3 py-2.5 text-sm font-normal rounded-xl;
+	}
+	&.menu-item-size-lg {
+	}
+
+	/**
+	* Menu color
+	**/
+	&.menu-item-color-berry {
+		--mn-solid: var(--color-berry-700);
+		--mn-solid-flat: var(--color-berry-200);
+		--mn-solid-light: var(--color-berry-200);
+		--mn-border: var(--color-berry-700);
+		--mn-text: var(--color-berry-700);
+		--mn-foreground: var(--color-berry-50);
+	}
+	&.menu-item-color-basic {
+		--mn-solid: var(--color-basic-900);
+		--mn-solid-flat: var(--color-basic-200);
+		--mn-solid-light: var(--color-basic-300);
+		--mn-border: var(--color-basic-300);
+		--mn-text: var(--color-basic-900);
+		--mn-foreground: var(--color-basic-50);
+	}
+	&.menu-item-color-paradiso {
+		--mn-solid: var(--color-paradiso-200);
+		--mn-border: var(--color-paradiso-200);
+	}
+	&.menu-item-color-foreground {
+		--mn-solid: var(--color-basic-200);
+		--mn-border: var(--color-basic-200);
+	}
+	&.menu-item-color-poppy {
+		--mn-solid: var(--color-poppy-500);
+		--mn-solid-flat: var(--color-poppy-100);
+		--mn-solid-light: var(--color-poppy-200);
+		--mn-border: var(--color-poppy-500);
+		--mn-text: var(--color-poppy-500);
+		--mn-foreground: var(--color-poppy-50);
+	}
+}

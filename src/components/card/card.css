@@ -1,0 +1,3 @@
+.card {
+	@apply relative rounded-xl overflow-hidden bg-white h-fit w-fit;
+}

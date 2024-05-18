@@ -1,0 +1,7 @@
+.kbd {
+	@apply relative px-1.5 py-0.5 text-[--color-basic-700] inline-flex space-x-0.5 items-center text-center text-sm shadow-sm rounded-lg no-underline border-solid border border-[--color-basic-200] bg-[--color-basic-100];
+}
+
+.kbd-abbr {
+	@apply no-underline;
+}

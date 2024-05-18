@@ -1,0 +1,76 @@
+.wrapper {
+	@apply relative box-border duration-150 cursor-text hover:bg-neutral-50;
+
+	&.wrapper-variant-default {
+		@apply relative border-2 border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60;
+		&:focus-within {
+			@apply border-black;
+		}
+
+		.wrapper-input {
+			@apply absolute transform top-1/2 -translate-y-1/2 left-4 right-4;
+			@apply appearance-none outline-none border-none bg-transparent duration-150 placeholder:text-sm;
+		}
+		&:not(:focus-within) .wrapper-input {
+			@apply placeholder-transparent;
+		}
+
+		.wrapper-content {
+			@apply absolute transform top-1/2 -translate-y-1/2 duration-150 left-4 right-4;
+			@apply font-normal text-sm pointer-events-none;
+		}
+		&:focus-within .wrapper-content,
+		.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
+			@apply opacity-0;
+		}
+	}
+
+	&.wrapper-variant-floating {
+		@apply relative border-2 border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60;
+		&:focus-within {
+			@apply border-black;
+		}
+
+		.wrapper-input {
+			@apply absolute transform top-1/2 -translate-y-1/2 left-4 right-4;
+			@apply appearance-none outline-none border-none bg-transparent duration-150 placeholder:text-sm;
+		}
+		&:not(:focus-within) .wrapper-input {
+			@apply placeholder-transparent;
+		}
+
+		.wrapper-content {
+			@apply absolute transform top-1/2 -translate-y-1/2 duration-150 px-1 left-3 right-3;
+			@apply font-normal text-sm pointer-events-none;
+		}
+		&:focus-within .wrapper-content,
+		.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
+			@apply absolute top-0 text-xs bg-white font-normal text-neutral-900 w-fit;
+		}
+	}
+
+	&.wrapper-variant-ifta {
+		@apply relative border-2 border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60 select-none;
+		&:focus-within {
+			@apply border-black;
+		}
+
+		.wrapper-input {
+			@apply absolute transform bottom-[1px] left-4 right-4;
+			@apply appearance-none outline-none border-none bg-transparent duration-150;
+			@apply font-normal text-sm;
+		}
+		&:not(:focus-within) .wrapper-input {
+			@apply placeholder-transparent;
+		}
+
+		.wrapper-content {
+			@apply absolute transform top-1/2 -translate-y-1/2 duration-150 px-1 left-3 right-3;
+			@apply font-normal text-sm pointer-events-none;
+		}
+		&:focus-within .wrapper-content,
+		.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
+			@apply absolute top-0.5 translate-y-0 text-xs font-normal w-fit text-neutral-900;
+		}
+	}
+}

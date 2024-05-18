@@ -1,0 +1,17 @@
+.next
+.storybook
+.vscode
+node_modules/
+public/
+src/*
+src
+.eslintrc.json
+.gitignore
+next-env.d.ts
+next.config.mjs
+pnpm-lock.yaml
+postcss.config.js
+README.md
+tailwind.config.js
+tsconfig.json
+tsup.config.ts
