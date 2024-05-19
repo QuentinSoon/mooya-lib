@@ -11,4 +11,12 @@ export default defineConfig({
 	clean: true,
 	// Sourcemaps for easier debugging.
 	sourcemap: false,
+	minify: true,
+	format: ['cjs', 'esm'],
+	external: ['react'],
+	esbuildOptions(options) {
+		options.banner = {
+			js: '"use client"',
+		};
+	},
 });

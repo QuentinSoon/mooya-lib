@@ -1,8 +1,9 @@
 {
 	"name": "mooya-lib",
-	"version": "2.0.7",
-	"private": true,
+	"version": "2.0.9",
 	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
 	"files": [
 		"dist"
 	],
