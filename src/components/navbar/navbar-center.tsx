@@ -4,9 +4,9 @@ import { HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
 import { cn } from '../../utils/cn';
 import './navbar.css';
 
-export type NavbarCenterProps = PropsWithChildren<{}>;
+type NavbarCenterProps = PropsWithChildren<{}>;
 
-export type UseNavbarCenterPropsProps = Omit<
+type UseNavbarCenterPropsProps = Omit<
 	HTMLAttributes<HTMLDivElement>,
 	keyof NavbarCenterProps
 > &
@@ -20,3 +20,4 @@ const NavbarCenter = forwardRef<HTMLDivElement, UseNavbarCenterPropsProps>(
 NavbarCenter.displayName = 'NavbarCenter';
 
 export { NavbarCenter };
+export type { NavbarCenterProps, UseNavbarCenterPropsProps };

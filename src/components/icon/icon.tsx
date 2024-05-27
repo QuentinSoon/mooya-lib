@@ -1,19 +1,21 @@
 'use client';
 
-import { icons } from 'lucide-react';
+import { LucideProps, icons } from 'lucide-react';
+import { SVGAttributes } from 'react';
 
 export type IconProps = {
 	name: keyof typeof icons;
-	size?: number;
-	color?: string;
-};
+} & LucideProps;
 
-export const Icon = ({ name, size, color, ...props }: IconProps) => {
+export type UseCardProps = Omit<SVGAttributes<SVGSVGElement>, keyof IconProps> &
+	IconProps;
+
+export const Icon = ({ name, ...props }: IconProps) => {
 	const LucideIcon = icons[name];
 
 	if (!LucideIcon) {
 		throw new Error(`Icon "${name}" not found`);
 	}
 
-	return <LucideIcon color={color} size={size} />;
+	return <LucideIcon {...props} />;
 };
